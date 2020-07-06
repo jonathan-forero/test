@@ -1,12 +1,9 @@
 # Style Guide
 
 # Table of contents
-1. [Introduction](#introduction)
+1. [Naming](#naming)
 
-## This is the introduction <a name="introduction"></a>
-Some introduction text, formatted in heading 2 style
-
-## *1. Naming*
+## *1. Naming* <a name="naming"></a>
 
 This project uses [BEM](http://getbem.com/) as a naming convention.
  
