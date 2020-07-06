@@ -157,74 +157,84 @@ Some tips about how to proceed when naming the website elements:
     custom styles by using BEM modifiers.
 
 Example: 
-
-    .related {  
-	    // subelements: BEM elements  
-	    .related__card { 
-		    /*...*/ 
-		}  
-	    // subelements: BEM modifiers  
-	    .related--links {  
-		    .related__card { /* specific styles for related links cards */ }  
-	    }  
-	    .related--products {  
-		    .related__card { /* specific styles for related product cards */ }  
-	    }  
-    }
+```scss
+.related {  
+    // subelements: BEM elements  
+    .related__card { 
+	    /*...*/ 
+	}  
+    // subelements: BEM modifiers  
+    .related--links {  
+	    .related__card { /* specific styles for related links cards */ }  
+    }  
+    .related--products {  
+	    .related__card { /* specific styles for related product cards */ }  
+    }  
+}
+```
     
 Try to use up to two levels for BEM elements. Leave the third level for particular cases where including the third level is somehow useful. A good way to determine the nesting level of the component is to think if it could be moved one level up without sacrificing meaning or creating structural inconsistencies. 
 
 Take a look to the `.product__picture` element in the following example. It could be moved to the same level than `.product__body` without much problem and naming it `.product__body__picture` is less flexible and a little bit redundant. 
 
-    .product {  
-      .product__body {  
-        // subelements: tags/classes  
-        .category { /*...*/ }  
-        .description { /*...*/ }  
-      }  
-      .product__header { /*...*/ }  
-      .product__picture {  
-        .description { /*...*/ }  
-        .picture { /*...*/ }  
-      }  
-    }  
-
-    <div className="product">  
-      <div className="product__header">...</div>  
-      <div className="product__body">  
-        <div className="category">...</div>  
-        <div className="product__picture">  
-          <div className="description">...</div>  
-          <img src="img.png" alt="Alt text" className="picture" />  
-        </div>  
-        <div className="description">...</div>  
-      </div>  
+```scss
+.product {  
+  .product__body {  
+    // subelements: tags/classes  
+    .category { /*...*/ }  
+    .description { /*...*/ }  
+  }  
+  .product__header { /*...*/ }  
+  .product__picture {  
+    .description { /*...*/ }  
+    .picture { /*...*/ }  
+  }  
+} 
+```
+```jsx
+<div className="product">  
+  <div className="product__header">...</div>  
+  <div className="product__body">  
+    <div className="category">...</div>  
+    <div className="product__picture">  
+      <div className="description">...</div>  
+      <img src="img.png" alt="Alt text" className="picture" />  
     </div>  
+    <div className="description">...</div>  
+  </div>  
+</div> 
+```
 
 Avoid nesting more than 3 levels as much as possible. E.g. **don't use** `.product__header__title__chapter`. In these cases, using child elements without BEM naming should be enough (see the example).
 
-    .product {  
-      .product__header {  
-        .product__header__title {  
-          .chapter { /*...*/ }  
-          .text { /*...*/ }  
-          .icon { /*...*/ }  
-        }  
-      }  
+```scss
+.product {  
+  .product__header {  
+    .product__header__title {  
+      .chapter { /*...*/ }  
+      .text { /*...*/ }  
+      .icon { /*...*/ }  
     }  
+  }  
+} 
+```
 
 Try to create one word components as much as possible. For example, if there are no previous blocks named commodity and this word it's meaningful enough then naming a block just commodity would be the right decision. If you later need to create some variants you could apply BEM modifiers.  
 
-    .commodity {  
-      /* main commodity styles */  
-      .commodity--product { /* specific styles for products */ }  
-      .commodity--services { /* specific styles for services */ }  
-    }  
+```scss
+.commodity {  
+  /* main commodity styles */  
+  .commodity--product { /* specific styles for products */ }  
+  .commodity--services { /* specific styles for services */ }  
+}  
+```
 
 Auxiliary BEM elements: sometimes we need an element to wrap things or for another reasons and we don't want these elements affect the BEM nesting flow. In these cases it's allowed to use an "auxiliary" BEM element. To mark this special subelements we'll use ---. E.g.  
 
-    <div class="block">  
-      <div class="block---wrapper">  
-        <div class="block__subelement"></div>  
-      </div>  
-    </div>
+```jsx
+<div class="block">  
+  <div class="block---wrapper">  
+    <div class="block__subelement"></div>  
+  </div>  
+</div>
+```
