@@ -100,9 +100,11 @@ Modifiers
 
 Example:
 
-    <div className="feature-box feature-box--highlighted">  
-      <div className="feature-box__image feature-box__image--rounded">...</div>  
-    </div> 
+```jsx
+<div className="feature-box feature-box--highlighted">  
+  <div className="feature-box__image feature-box__image--rounded">...</div>  
+</div> 
+```
 
 If you are mixing classes from `antd` with structural classes on the same elements the ones corresponding to `antd` must be placed first:
 
