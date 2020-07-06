@@ -1,7 +1,10 @@
 # Style Guide
 
-# Table of Contents
-1. [*1. Naming*](#naming)
+# Table of contents
+1. [Introduction](#introduction)
+
+## This is the introduction <a name="introduction"></a>
+Some introduction text, formatted in heading 2 style
 
 ## *1. Naming*
 
