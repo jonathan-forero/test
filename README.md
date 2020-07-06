@@ -111,27 +111,35 @@ If you are mixing classes from `antd` with structural classes on the same elemen
 antd specific classes  / Block / Block sub-element  
 Modifiers
 
-    <div className="ant-rate-text feature-box feature-box--highlighted">...</div>  
+```jsx
+<div className="ant-rate-text feature-box feature-box--highlighted">...</div>
+```
 
 ## *4. Targeting elements in rules*
 
 Always favor to target elements using its classes unless you are very sure that you won't affect another element of the same type. For example, to target the following list:
 
-    <div class="parent">  
-      <ul class="main-menu">....</ul>  
-    </div>  
+```jsx
+<div className="parent">  
+  <ul className="main-menu">....</ul>  
+</div>
+```  
 
 Always try to use:
 
-    .parent {  
-      .main-menu { /* some properties */}  
-    }  
+```scss
+.parent {  
+ .main-menu { /* some properties */}  
+}
+```
 
 Avoiding this as much as possible:
 
-    .parent {  
-      ul { /* some properties */}  
-    }  
+```scss
+.parent {  
+  ul { /* some properties */}  
+}  
+```
 
 If the element doesn't have a identifying class, try to add it modifying the markup.
 
