@@ -159,17 +159,17 @@ Some tips about how to proceed when naming the website elements:
 Example: 
 ```scss
 .related {  
-    // subelements: BEM elements  
-    .related__card { 
-	    /*...*/ 
-	}  
-    // subelements: BEM modifiers  
-    .related--links {  
-	    .related__card { /* specific styles for related links cards */ }  
-    }  
-    .related--products {  
-	    .related__card { /* specific styles for related product cards */ }  
-    }  
+  // subelements: BEM elements  
+  .related__card { 
+    /*...*/ 
+  }  
+  // subelements: BEM modifiers  
+  .related--links {  
+    .related__card { /* specific styles for related links cards */ }  
+  }  
+  .related--products {  
+    .related__card { /* specific styles for related product cards */ }  
+  }  
 }
 ```
     
