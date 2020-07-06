@@ -2,6 +2,10 @@
 
 # Table of contents
 1. [Naming](#naming)
+2. [SCSS Rules ordering and nesting](#ordering-nesting)
+3. [Class order in markup](#order-markup)
+4. [Targeting elements in rules](#targeting)
+5. [Naming structural blocks](#structural-blocks)
 
 ## *1. Naming* <a name="naming"></a>
 
@@ -9,7 +13,7 @@ This project uses [BEM](http://getbem.com/) as a naming convention.
  
 When a block component is very large, it can be splitted using the corresponding BEM name. For example, `_order.scss` has the following separate fields for `_order--new.scss` and `_order--edit.scss` for the respective 'new' and 'edit' variants.
 
-## *2. SCSS Rules ordering and nesting*
+## *2. SCSS Rules ordering and nesting* <a name="ordering-nesting"></a>
 
 This is the order that each rule in the style-sheets must follow.
 
@@ -94,7 +98,7 @@ For cases with only one property, please check following example and comments in
 }  
 ```
 
-## *3. Class order in markup*
+## *3. Class order in markup* <a name="order-markup"></a>
 
 Structural classes must follow the following order:
 
@@ -118,7 +122,7 @@ Modifiers
 <div className="ant-rate-text feature-box feature-box--highlighted">...</div>
 ```
 
-## *4. Targeting elements in rules*
+## *4. Targeting elements in rules* <a name="targeting"></a>
 
 Always favor to target elements using its classes unless you are very sure that you won't affect another element of the same type. For example, to target the following list:
 
@@ -146,7 +150,7 @@ Avoiding this as much as possible:
 
 If the element doesn't have a identifying class, try to add it modifying the markup.
 
-## *5. Naming structural blocks*
+## *5. Naming structural blocks* <a name="structural-blocks"></a>
 
 Some tips about how to proceed when naming the website elements:
 
