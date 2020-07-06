@@ -24,51 +24,51 @@ This is the order that each rule in the style-sheets must follow.
 Note that a sub-element must apply this recursively. See and study the following example:
 
 ```scss
-.block {  
-@include button-text;  
-@include button-general;  
-color: white;  
-padding: 20px 0;  
-width: 100%;  
-// pseudo classes  
-&:hover {  
-/* some rules */  
-}  
-// pseudo elements  
-&::before {  
-/* some rules */  
-}  
-// media queries  
-@media (min-width: $screen-sm-min) {  
-/* some rules */  
-}  
-// subelements: tags/classes  
-h1 {  
-/* some rules */  
-}  
-p {  
-@include text-general;  
-color: black;  
-// pseudo elements  
-&:before {  
-  /* some rules */  
-}  
-// media queries  
-@media (min-width: $screen-lg-min) {  
-  /* some rules */  
-}  
-}  
-.parent-class & {  
-/* some rules */  
-}  
-// subelements: BEM elements  
-@at-root &__subelement {  
-/* some rules */  
-}  
-// subelements: BEM modifiers  
-@at-root &--collapsed {  
-/* some rules */  
-}  
+.block {
+  @include button-text;  
+  @include button-general;  
+  color: white;  
+  padding: 20px 0;  
+  width: 100%;  
+  // pseudo classes  
+	&:hover {  
+		/* some rules */  
+	}  
+	// pseudo elements  
+	&::before {  
+		/* some rules */  
+	}  
+	// media queries  
+	@media (min-width: $screen-sm-min) {  
+		/* some rules */  
+	}  
+	// subelements: tags/classes  
+	h1 {  
+		/* some rules */  
+	}  
+	p {  
+		@include text-general;  
+		color: black;  
+		// pseudo elements  
+		&:before {  
+  		/* some rules */  
+		}  
+		// media queries  
+		@media (min-width: $screen-lg-min) {  
+  		/* some rules */  
+		}  
+	}
+	.parent-class & {  
+		/* some rules */  
+	}  
+	// subelements: BEM elements  
+	@at-root &__subelement {  
+		/* some rules */  
+	}  
+	// subelements: BEM modifiers  
+	@at-root &--collapsed {  
+		/* some rules */  
+	}  
 }
 ```
 For cases with only one property, please check following example and comments inline:
