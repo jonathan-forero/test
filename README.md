@@ -73,23 +73,23 @@ Note that a sub-element must apply this recursively. See and study the following
 ```
 For cases with only one property, please check following example and comments inline:
 
-    .block {  
-      @include button-general;  
-      @include button-text;  
-      h1 {  
-        /* some rules */  
-      }  
-      // subelements: BEM elements  
-      @at-root &__items {  
-        display: inline-block;  
-        // subelements: tags  
-        a {  
-          color: $white;  
-        }  
-      }  
+```scss
+.block {  
+  @include button-general;  
+  @include button-text;  
+  h1 {  
+    /* some rules */  
+  }  
+  // subelements: BEM elements  
+  @at-root &__items {  
+    display: inline-block;  
+    // subelements: tags  
+    a {  
+      color: $white;  
     }  
-
-
+  }  
+}  
+```
 
 ## *3. Class order in markup*
 
