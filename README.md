@@ -1,5 +1,8 @@
 # Style Guide
 
+# Table of Contents
+1. [*1. Naming*](#naming)
+
 ## *1. Naming*
 
 This project uses [BEM](http://getbem.com/) as a naming convention.
